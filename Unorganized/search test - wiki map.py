@@ -9,7 +9,9 @@ channels = [	['Physics Girl', 'https://www.youtube.com/user/physicswoman/videos'
 		['Electroboom', 'https://www.youtube.com/user/msadaghd/videos'],
 		['Real Engineering', 'https://www.youtube.com/channel/UCR1IuLEqb6UEA_zQ81kwXfg/videos'],
 		['Numberphile', 'https://www.youtube.com/user/numberphile/videos'],
-		['TedEd', 'https://www.youtube.com/user/TEDEducation/videos'],	]
+		['TedEd', 'https://www.youtube.com/user/TEDEducation/videos'],
+		['3Blue1Brown', 'https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/videos'],
+		['Mathologer', 'https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg/videos']	]
 
 searchword = 'Parabola'
 hits = 0
@@ -62,7 +64,7 @@ for channel in channels:
 						print(videolinknum)
 						print(videoname)
 						print(videoURL)
-						print(sub.text)
+						print(sub.text + " : @ " + str(sub.start))
 						print(currentsubtype)
 
 				if re.search(word, sub.text, re.IGNORECASE):
@@ -73,7 +75,7 @@ for channel in channels:
 					print(videolinknum)
 					print(videoname)
 					print(videoURL)
-					print(sub.text)
+					print(sub.text + " : @ " + str(sub.start))
 					print(currentsubtype)
 
 

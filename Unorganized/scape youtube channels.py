@@ -27,7 +27,35 @@ channels = [	['Physics Girl', 'https://www.youtube.com/user/physicswoman/videos'
 		['3Blue1Brown', 'https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/videos'],
 		['Mathologer', 'https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg/videos'],
 		['MindYourDecisions', 'https://www.youtube.com/user/MindYourDecisions/videos'],
-		['Half as Interesting', 'https://www.youtube.com/channel/UCuCkxoKLYO_EQ2GeFtbM_bw/videos']	]
+		['Half as Interesting', 'https://www.youtube.com/channel/UCuCkxoKLYO_EQ2GeFtbM_bw/videos'],
+		['Welch Labs', 'https://www.youtube.com/user/Taylorns34/videos'],
+		['PBS SpaceTime', 'https://www.youtube.com/channel/UC7_gcs09iThXybpVgjHZ_7g/videos'],
+		['PBS Infinite Series', 'https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g/videos'],
+		['VSauce', 'https://www.youtube.com/user/Vsauce/videos'],
+		['Computerphile', 'https://www.youtube.com/user/Computerphile/videos'],
+		['Action Lab', 'https://www.youtube.com/channel/UC1VLQPn9cYSqx8plbk9RxxQ/videos'],
+		['ASAP Science', 'https://www.youtube.com/user/AsapSCIENCE/videos'],
+		['Smarter Everyday', 'https://www.youtube.com/user/destinws2/videos'],
+		['Kurzgesagt', 'https://www.youtube.com/user/Kurzgesagt/videos'],
+		['Physics Videos by Eugene Khutoryansky', 'https://www.youtube.com/user/EugeneKhutoryansky/videos'],
+		['Verge Science', 'https://www.youtube.com/channel/UCtxJFU9DgUhfr2J2bveCHkQ/videos'],
+		['Up and Atom', 'https://www.youtube.com/channel/UCSIvk78tK2TiviLQn4fSHaw/videos'],
+		['Sixty Symbols', 'https://www.youtube.com/user/sixtysymbols/videos'],
+		['Sci Show', 'https://www.youtube.com/user/scishow/videos'],
+		['Minute Earth', 'https://www.youtube.com/user/minuteearth/videos'],
+		['VSauce2', 'https://www.youtube.com/user/Vsauce2/videos'],
+		['VSauce3', 'https://www.youtube.com/user/Vsauce3/videos'],
+		['Its Okay To Be Smart', 'https://www.youtube.com/user/itsokaytobesmart/videos'],
+		['Looking Glass Universe', 'https://www.youtube.com/user/LookingGlassUniverse/videos'],
+		['Mark Rober', 'https://www.youtube.com/user/onemeeeliondollars/videos'],
+		['Numberphile2', 'https://www.youtube.com/channel/UCyp1gCHZJU_fGWFf2rtMkCg/videos'],
+		['Piled Higher and Deeper', 'https://www.youtube.com/user/phdcomics/videos'],
+		['RealLifeLore', 'https://www.youtube.com/channel/UCP5tjEmvPItGyLhmjdwP7Ww/videos'],
+		['Seeker', 'https://www.youtube.com/user/DNewsChannel/videos'],
+		['Simone Giertz', 'https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ/videos'],
+		['Steve Mould', 'https://www.youtube.com/user/steventhebrave/videos'],
+		['The Infographics Show', 'https://www.youtube.com/user/TheInfographicsShow/videos']	]
+		
 
 def check(channelnm):
 	exist = False
