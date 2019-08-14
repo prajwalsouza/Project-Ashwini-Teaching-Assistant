@@ -54,7 +54,8 @@ channels = [	['Physics Girl', 'https://www.youtube.com/user/physicswoman/videos'
 		['Seeker', 'https://www.youtube.com/user/DNewsChannel/videos'],
 		['Simone Giertz', 'https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ/videos'],
 		['Steve Mould', 'https://www.youtube.com/user/steventhebrave/videos'],
-		['The Infographics Show', 'https://www.youtube.com/user/TheInfographicsShow/videos']	]
+		['The Infographics Show', 'https://www.youtube.com/user/TheInfographicsShow/videos'],
+		['Deep Look', 'https://www.youtube.com/user/KQEDDeepLook/videos']	]
 		
 
 def check(channelnm):

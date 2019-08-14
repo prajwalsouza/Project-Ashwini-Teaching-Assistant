@@ -39,7 +39,16 @@ channels = [	['Physics Girl', 'https://www.youtube.com/user/physicswoman/videos'
 		['RealLifeLore', 'https://www.youtube.com/channel/UCP5tjEmvPItGyLhmjdwP7Ww/videos'],
 		['Seeker', 'https://www.youtube.com/user/DNewsChannel/videos']	]
 
-searchword = 'idempot'
+playlists = [ 	['Tom Scott - Things You Might Not Know', 'https://www.youtube.com/playlist?list=PL96C35uN7xGI9HGKHsArwxiOejecVyNem'],
+		['Vox - Vox Observatory', 'https://www.youtube.com/playlist?list=PLJ8cMiYb3G5eNMPb_MTRyLDzm_AOIk7UF'],
+		['Vox - Climate Lab', 'https://www.youtube.com/playlist?list=PLJ8cMiYb3G5fP5oq01TBp9fgh70vDDSMe'],
+		['Vox - Design', 'https://www.youtube.com/playlist?list=PLJ8cMiYb3G5eD0M1Bfm6lvHy5BR6hoY8X'],
+		['Vox - False Positive', 'https://www.youtube.com/playlist?list=PLJ8cMiYb3G5fFn2vF2MvF9Cf6RnaoSZQj'],
+		['WIRED - Almost Impossible', 'https://www.youtube.com/playlist?list=PLibNZv5Zd0dweG40QXqhvOk-L1XymbfXi'],
+		['WIRED - Obsessed', 'https://www.youtube.com/playlist?list=PLibNZv5Zd0dzFVZ0BvcOZUf0J0Ifn1GeI'],
+		['WIRED - Future Tech', 'https://www.youtube.com/playlist?list=PLibNZv5Zd0dzhh9XCT8Wnbi72U9nDW30B']	]
+		
+searchword = 'telescop'
 hits = 0
 
 numberofvideoswithHits = 0
@@ -97,6 +106,61 @@ for channel in channels:
 
 			if currentHits != 0:
 				searchedData[videoname] = [currentHits, channelName, videoname, videoURL, videolinknum, sublocations, currentsubtype]
+				searchedDataSpecific[videoname] = currentHits
+
+	print(str(numberofvideoswithHits) + ' videos with hits so far.') 
+
+print("\n Looking in Playlists.")
+
+for playlist in playlists:
+	playlistName = playlist[0]
+	print("Searching in " + playlistName)
+	filehandler = open("H:\#Everything Else\#Project Ashwini\playlists\\" + playlistName + "\\" + playlistName + "-Data.p","rb")
+	playlistData = pickle.load(filehandler)
+	filehandler.close()
+
+	videolinks = playlistData[2]
+
+	for videolinknum in range(len(videolinks)):
+		videoname = videolinks[videolinknum][0]
+		videoURL = videolinks[videolinknum][1]
+
+		currentHits = 0
+
+
+
+		subtypes = ['A-', 'C-', 'P-']
+		available = False
+		for k in range(len(subtypes)):
+			try:
+				mainfile = pysrt.open("H:\#Everything Else\#Project Ashwini\SRT - playlists\\" + playlistName + "\\" + subtypes[k] + playlistName + "-" + str(videolinknum) + ".srt")
+				available = True
+				currentsubtype = subtypes[k]
+				break
+			except:
+				None
+		if available:
+			sublocations = []
+			for sub in mainfile:
+				if re.search(searchword, sub.text, re.IGNORECASE):
+					hits = hits + 1
+					currentHits = currentHits + 1
+					if videoURL != urlIdentifier:
+						numberofvideoswithHits = numberofvideoswithHits + 1
+						urlIdentifier = videoURL
+
+					sublocations.append(sub)
+						
+					# print("")
+					# print(playlistName)
+					# print(videolinknum)
+					# print(videoname)
+					# print(videoURL)
+					# print(sub.text + " : @ " + str(sub.start))
+					# print(currentsubtype)
+
+			if currentHits != 0:
+				searchedData[videoname] = [currentHits, playlistName, videoname, videoURL, videolinknum, sublocations, currentsubtype]
 				searchedDataSpecific[videoname] = currentHits
 
 	print(str(numberofvideoswithHits) + ' videos with hits so far.') 
